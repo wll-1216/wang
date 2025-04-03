@@ -74,8 +74,10 @@ p {
 }
 .elixirs a:visited{
   color: #333333;
+  text-decoration: none;
 }
 .elixirs a:hover{
   background: #f88396;
   color: #0d5353;
+  text-decoration: none;
 }
