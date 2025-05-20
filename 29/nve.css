@@ -23,7 +23,7 @@ body {
     width: 313px; /* 一级导航栏宽度 + 二级导航栏最小宽度 */
     height: 380px;   /* 固定容器高度 */
     overflow-y: auto;
-    background-color: #1652a0; /* 容器背景颜色 */
+    background-color: transparent;; /* 容器背景颜色 */
     transition: right 0.3s; /* 为容器添加过渡效果 */
 }
 
@@ -32,6 +32,8 @@ body {
 }
 
 .visitnav-list-d1 {
+    background: rgba(28, 36, 70, 0.8); /* 一级导航栏背景颜色 */
+    border-bottom: 1px solid rgba(49, 63, 90, 0.55); /* 一级导航栏底部边框 */
     position: relative;
     border-radius: 0; /* 移除圆角 */
     box-shadow: none; /* 移除阴影 */
@@ -56,26 +58,28 @@ body {
     border: none;
     padding: 12px 20px;
     text-align: center; /* 文字居中 */
-    font-size: 14px;
-    color: white;
-    cursor: pointer;
+    font-size: 14px;    /* 字体大小 */
+    font-weight: 500; /* 设置字体粗细 */
+    color:#fff;  /* 文字颜色 */
+    cursor: pointer; /* 鼠标指针样式 */
     transition: background-color 0.2s, color 0.2s;
 }
 
 .visitnav-list-d1-title:hover {
-    background-color: #f0f0f0;
-    color: #1652a0;
+    background-color: #1b3b86; /* 鼠标悬停时背景颜色 */
+    color: #fff; /* 鼠标悬停时文字颜色 */
 }
 
 .visitnav-list-d2-list {
+    display: none; /* 初始时隐藏二级导航栏 */
+    list-style: none ; /* 移除列表样式 */
     display: none;
-    list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 11px 20px;
     position: absolute; /* 绝对定位 */
-    left: 100%; /* 定位到一级导航栏右侧 */
+    left: 113px; /* 定位到一级导航栏右侧 */
     top: 0;
-    background-color: #1652a0; /* 二级导航栏背景颜色 */
+    background: #4e70be;  /* 二级导航栏背景颜色 */
     min-width: 200px; /* 二级导航栏最小宽度 */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 添加阴影 */
 }
@@ -86,20 +90,30 @@ body {
 
 .visitnav-list-d2-item a {
     display: block;
-    padding: 8px 20px 8px 30px;
+    margin-bottom: 7px;
     font-size: 13px;
-    color: white;
+    font-weight: 500; /* 设置字体粗细 */;
+    line-height: 300px;
+    color: #fff;
     text-decoration: none; /* 去除超链接下划线 */
-    transition: background-color 0.2s, color 0.2s;
+    transition: background-color 0.2s, color 0.2s; /* 添加过渡效果 */
 }
 
 .visitnav-list-d2-item a:hover {
-    background-color:#f0f0f0;
-    color:#1652a0;
+    background-color :#1b3b86;/* 鼠标悬停时背景颜色 */
+    color:#fff;  /* 鼠标悬停时文字颜色 */
 }
 
 .visitnav-list-d1-title img {
-    width: 20px; /* 设置图片宽度 */
-    height: 20px; /* 设置图片高度 */
+   
+    width: 30px; /* 设置图片宽度 */
+    height: 23px; /* 设置图片高度 */
     margin-bottom: 5px; /* 设置图片与文字的间距 */
+}
+
+/* 全局移除无序列表的默认样式 */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
